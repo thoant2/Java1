@@ -29,19 +29,5 @@ public class App {
 
         
     }
-    void show()
-    {
-        float b = 2.5f;
-        boolean c = true;
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-    }
-
-    static void show_static()
-    {
-        char d = 'a';
-        String c = "phương thức static";
-        System.out.println(c);
-    }
+   
 }
