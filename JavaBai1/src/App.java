@@ -1,6 +1,8 @@
 import org.w3c.dom.ls.LSOutput;
 
 import java.sql.SQLOutput;
+import Lesson2.*;
+import Lesson1.*;
 
 public class App {
     int a = 5;

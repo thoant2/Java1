@@ -1,6 +1,7 @@
+package Lesson2;
 public class Month {
     // Nhập vào tháng bất kỳ, in ra màn hình thông tin tháng đó có bao nhiêu ngày
-    void calDays(int month, int year)
+    public void calDays(int month, int year)
     {
         switch (month)
         {

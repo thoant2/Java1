@@ -1,7 +1,8 @@
+package Lesson1;
 public class BMI {
     int weight = 52;
     double height = 1.60;
-    void calBMI(int weight, double height)
+    public void calBMI(int weight, double height)
     {
         double bmi = weight/(height*height);
         System.out.println("Cân nặng: "+ weight);
@@ -16,7 +17,7 @@ public class BMI {
         else
             System.out.println("Oh, bạn đang thừa cân, cần chế độ ăn uống hợp lý hơn nhé");
     }
-    void calSwitchCase(int number)
+    public void calSwitchCase(int number)
     {
         switch (number)
         {
