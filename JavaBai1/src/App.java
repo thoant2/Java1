@@ -1,6 +1,7 @@
 import org.w3c.dom.ls.LSOutput;
 
 import java.sql.SQLOutput;
+
 import Lesson2.*;
 import Lesson1.*;
 
@@ -8,7 +9,7 @@ public class App {
     int a = 5;
 
     public static void main(String[] args) throws Exception {
-       
+
 
         // Khai báo 1 object class app để gọi phương thức trong đối tượng
         //App app_object = new App();
@@ -88,13 +89,13 @@ public class App {
         System.out.println("Diện tích ht = "+s2+" cm2");
         */
 
-
+/*
         // bài tập về nhà 2.1
         System.out.println("\nBài 2.1:");
         Month month = new Month();
         month.calDays(2, 2005);
         month.calDays(2, 2004);
-        month.calDays(11, 2005);
+        month.calDays(0, 2005);
 
         // bài tập về nhà 2.2 giải phương trình
         System.out.println("\nBài 2.2:");
@@ -108,6 +109,139 @@ public class App {
         // bài tập về nhà 2.3 check 3 cạnh của tam giác
         System.out.println("\nBài 2.3:");
         cal.checkRectangle(a,b,c);
+
+ */
+    //loop100();
+loopSoNT();
+        //loopInt();
+        // loopString();
     }
-   
+
+    //Lặp chuỗi "Hello world" 10 lần
+    static void loopString() {
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("%s Hello World!\n", i + 1);
+        }
+    }
+    // in các số từ 0-> 50
+    static void loopInt()
+    {
+       /* for (int i = 50; i>= 0; i--)
+        {
+            if(i%2==0)
+                System.out.printf("\n\t%s",i);
+            else
+                System.out.printf("\n%s",i);
+        }*/
+        int totalChan=0;
+        int totalLe=0;
+        int count = 0;
+        for(int i=0;i<=50;i++)
+        {
+            if(i%2==0) {
+                System.out.printf("\t%s", i);
+                totalChan= totalChan+i;
+                count = count+1;
+            }
+            else
+                totalLe= totalLe+i;
+        }
+
+
+        System.out.printf("\nTổng các số chẵn < 50 là: %s", totalChan);
+        System.out.printf("\nTổng các số chẵn < 50 là: %s", totalLe);
+        System.out.printf("\nCó tổng cộng %s số chẵn < 50\n", count );
+
+        for(int i = 0; i<=50; i=i+2)
+        {
+            System.out.printf("\t%s", i);
+        }
+        int i = 0;
+        while (i<50)
+        {
+            System.out.printf("\t%s", i);
+            i++;
+        }
+    }
+
+    static void loop100()
+    {
+        for(int i = 1;i<=100; i++)
+        {
+            if(i%3==0)
+            {
+                if(i%5==0)
+                    System.out.printf("\n\t%s","FizzBuzz");
+                else
+                    System.out.printf("\t%s","Fizz");
+            }
+            else {
+                if (i % 5 == 0)
+                    System.out.printf("\t%s", "Buzz");
+                else
+                    System.out.printf("\t%s", i);
+            }
+        }
+        System.out.printf("\nCách 2 dùng vòng While: \n");
+        int i = 1;
+        while (i<=100)
+        {
+            if(i%3 == 0 && i%5== 0)
+            {
+                System.out.printf("\n\t%s","FizzBuzz");
+            }
+            else if(i%3 == 0)
+                System.out.printf("\t%s","Fizz");
+            else if(i%5 == 0)
+                System.out.printf("\t%s", "Buzz");
+            else
+                System.out.printf("\t%s", i);
+            i++;
+        }
+    }
+    static void loopSoNT()
+    {
+        int i= 0;
+        System.out.printf("Số NT < 100 là: \n");
+        System.out.printf("\nCách 1 while:\n ");
+        while (i<=100)
+        {
+            if(checksoNT(i) == true)
+                System.out.printf("\t%s",i);
+            i++;
+        }
+
+        System.out.printf("\nCách 2 do while:\n ");
+        i=0;
+        do{
+            if(checksoNT(i) == true)
+                System.out.printf("\t%s",i);
+            i++;
+        }
+        while(i<=100);
+
+        System.out.printf("\nCách 3 for:\n ");
+
+        for(i=0;i<=100;i++)
+        {
+           if(checksoNT(i) == true)
+               System.out.printf("\t%s",i);
+           
+        }
+
+    }
+    static boolean checksoNT(int number)
+    {
+        if(number<2)
+            return false;
+
+        for(int i=2; i<= Math.sqrt(number);i++)
+        {
+            if(number%i == 0)
+                return false;
+
+        }
+        return true;
+
+    }
 }

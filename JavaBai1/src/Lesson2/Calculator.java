@@ -12,12 +12,12 @@ public class Calculator {
             x1 = (-b+ Math.sqrt(delta))/2*a;
             x2 = (-b- Math.sqrt(delta))/2*a;
            System.out.println("Phương trình có 2 nghiệm: ");
-           System.out.println("\nx1 = "+x1);
-           System.out.println("\nx2 = "+x2);
+           System.out.printf("\nx1 = %2f",x1);
+           System.out.printf("\nx2 = %2f",x2);
        }
        else if(delta == 0)
        {
-           x1 = -b/2*a;
+           x1 = -b/(2*a);
            System.out.println("Phương trình có nghiệm kép x = "+ x1);
        }
        else

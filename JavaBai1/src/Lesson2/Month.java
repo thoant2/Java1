@@ -11,7 +11,7 @@ public class Month {
             case 4, 6, 9, 11:
                 System.out.println("Tháng "+month +" năm "+ year +" có 30 ngày");
                 break;
-            default:
+            case 2:
             {
                 if(year %4==0)
                     System.out.println("Tháng "+ month +" năm "+ year +" có 29 ngày");
@@ -19,6 +19,8 @@ public class Month {
                     System.out.println("Tháng "+ month +" năm "+ year +" có 28 ngày");
                 break;
             }
+            default:
+                System.out.printf("Không có tháng %s\n",month);
         }
     }
 }
