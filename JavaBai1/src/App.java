@@ -121,11 +121,12 @@ public class App {
 
 // Bài tập về nhà 3.1 số nguyên tố
         loopExercise.showSoNT();
+        // Bài tập về nhà 3.2 số fibonacci
         loopExercise.showFibonacci();
 
     }
 
-    //Lặp chuỗi "Hello world" 10 lần
+   /* //Lặp chuỗi "Hello world" 10 lần
     static void loopString() {
         for (int i = 0; i < 10; i++) {
             System.out.printf("%s Hello World!\n", i + 1);
@@ -134,13 +135,13 @@ public class App {
     // in các số từ 0-> 50
     static void loopInt()
     {
-       /* for (int i = 50; i>= 0; i--)
+       *//* for (int i = 50; i>= 0; i--)
         {
             if(i%2==0)
                 System.out.printf("\n\t%s",i);
             else
                 System.out.printf("\n%s",i);
-        }*/
+        }*//*
         int totalChan=0;
         int totalLe=0;
         int count = 0;
@@ -252,4 +253,5 @@ public class App {
         return true;
 
     }
+   */
 }
