@@ -1,9 +1,11 @@
+import Lesson3.LoopExercise;
 import org.w3c.dom.ls.LSOutput;
 
 import java.sql.SQLOutput;
 
 import Lesson2.*;
 import Lesson1.*;
+import Lesson3.*;
 
 public class App {
     int a = 5;
@@ -111,10 +113,16 @@ public class App {
         cal.checkRectangle(a,b,c);
 
  */
-    //loop100();
-loopSoNT();
+        //loop100();
+        //loopSoNT();
         //loopInt();
-        // loopString();
+        //loopString();
+        LoopExercise loopExercise= new LoopExercise();
+
+// Bài tập về nhà 3.1 số nguyên tố
+        loopExercise.showSoNT();
+        loopExercise.showFibonacci();
+
     }
 
     //Lặp chuỗi "Hello world" 10 lần
