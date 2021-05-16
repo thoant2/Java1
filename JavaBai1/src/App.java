@@ -119,12 +119,59 @@ public class App {
         //loopString();
         LoopExercise loopExercise= new LoopExercise();
 
-// Bài tập về nhà 3.1 số nguyên tố
-        loopExercise.showSoNT();
+        // Bài tập về nhà 3.1 số nguyên tố
+             //loopExercise.showSoNT();
         // Bài tập về nhà 3.2 số fibonacci
-        loopExercise.showFibonacci();
+            //loopExercise.showFibonacci();
+        // Bài tập 3.3 tính n!
+            // loopExercise.calGiaiThua();
+        // Bài tập 4.1
+        // viết CT tạo 1 số random, Kiểm tra số đó có phải số nguyên tố hay ko
+        // tính giai thừa của số đó
+            //loopExercise.randomSoNT();
+        // Bài tập 5
+        // cho chuỗi "You only live once, but if you do it right, once is enough"
+        // In ra màn hình index của tất cả ký tự 'o' trong chuỗi
+            loopExercise.indexChuoi();
 
+        // Bài tập 6
+        // Viêt CT in ra bảng cửu chương
+            //loopExercise.showBangCuuChuong();
+
+        // Bài tập 7
+        // Viêt CT nhập vào 3 cạnh, kiểm tra 3 cạnh là tam giác, tam giac vuông, cân, đều?
+            //loopExercise.checkTamGiac();
+
+        // Bài tập 8
+        // Nhập vào 1 chuỗi và đếm số từ của chuỗi đó
+           loopExercise.demTu();
+
+        // Bài tập 9
+        //Viêt CT thực hiện chuẩn hóa 1 xâu ký tự nhập từ bàn phím (loại bỏ dấu cách thừa, chuyển ký tự
+        // đầu mỗi từ thành chữ hoa, các ký tự khác là chữ thường)
+            //loopExercise.chuanHoaChuoi();
+        // Bài tập 10
+        // Viêt CT tính tổng các chữ số của 1 số nguyên bất kỳ. VD: 12345 tổng là 1+2+3+4+5
+            //loopExercise.tongChuSo();
+
+        // Bài tập 11
+        // Viêt CT phân tích số nguyên thành các thừa số nguyên tố, vd 28 =2*2*7
+
+        // Bài tập 12
+        // viết CT giải pt bậc nhất ax+b = 0
+
+        // Bài tập 13
+        // viết Ct nhập số nguyên n, tính tổng các số %3 từ 0 đến n
+
+        // Bài tập 14
+        // Viết CT nhập số bất kỳ, kiểm tra nó là nguyên âm hay nguyên dương
+
+        // Bài tập 15
+        // cho chuỗi "You only live once, but if you do it right, once is enough"
+        //  Đếm số lần ký tự 'o' trong  xh chuỗi
+            loopExercise.demKyTu();
     }
+
 
    /* //Lặp chuỗi "Hello world" 10 lần
     static void loopString() {
