@@ -69,7 +69,7 @@ public class App {
         System.out.println("1: Tính chu vi và diện tích hình chữ nhật");
         Rectangle rec = new Rectangle();
         int a = 15;
-        int b = 7; 
+        int b = 7;
         int p1 = rec.show_perimeter_Rec(a, b);
         int s1 = rec.show_superficies_Rec(a, b);
         System.out.println("Chiều dài a = "+ a +" cm");
@@ -77,16 +77,16 @@ public class App {
         System.out.println("Chu vi hcn = "+p1+" cm");
         System.out.println("Diện tích hcn = "+s1+" cm2");
 
-     
+
         // bài tập về nhà 1.2
-       
+
         System.out.println();
         System.out.println("2: Tính chu vi và diện tích hình tròn");
         Circle cir = new Circle();
         int r = 8;
         double p2 = cir.show_perimeter_Cir(r);
         double s2 = cir.show_superficies_Cir(r);
-        System.out.println("Bán kính r = "+ r +" cm");       
+        System.out.println("Bán kính r = "+ r +" cm");
         System.out.println("Chu vi ht = "+p2+" cm");
         System.out.println("Diện tích ht = "+s2+" cm2");
         */
@@ -118,7 +118,7 @@ public class App {
         //loopInt();
         //loopString();
         LoopExercise loopExercise= new LoopExercise();
-
+            loopExercise.menu();
         // Bài tập về nhà 3.1 số nguyên tố
              //loopExercise.showSoNT();
         // Bài tập về nhà 3.2 số fibonacci
@@ -132,7 +132,7 @@ public class App {
         // Bài tập 5
         // cho chuỗi "You only live once, but if you do it right, once is enough"
         // In ra màn hình index của tất cả ký tự 'o' trong chuỗi
-            loopExercise.indexChuoi();
+            //loopExercise.indexChuoi();
 
         // Bài tập 6
         // Viêt CT in ra bảng cửu chương
@@ -144,7 +144,7 @@ public class App {
 
         // Bài tập 8
         // Nhập vào 1 chuỗi và đếm số từ của chuỗi đó
-           loopExercise.demTu();
+           //loopExercise.demTu();
 
         // Bài tập 9
         //Viêt CT thực hiện chuẩn hóa 1 xâu ký tự nhập từ bàn phím (loại bỏ dấu cách thừa, chuyển ký tự
@@ -156,20 +156,20 @@ public class App {
 
         // Bài tập 11
         // Viêt CT phân tích số nguyên thành các thừa số nguyên tố, vd 28 =2*2*7
-
+            //loopExercise.tinhTSNT();
         // Bài tập 12
         // viết CT giải pt bậc nhất ax+b = 0
-
+            //loopExercise.giaiPTBac1();
         // Bài tập 13
         // viết Ct nhập số nguyên n, tính tổng các số %3 từ 0 đến n
-
+            //loopExercise.tongSoChiaHetCho3();
         // Bài tập 14
         // Viết CT nhập số bất kỳ, kiểm tra nó là nguyên âm hay nguyên dương
-
+            //loopExercise.checkSoNguyen();
         // Bài tập 15
         // cho chuỗi "You only live once, but if you do it right, once is enough"
         //  Đếm số lần ký tự 'o' trong  xh chuỗi
-            loopExercise.demKyTu();
+           // loopExercise.demKyTu();
     }
 
 

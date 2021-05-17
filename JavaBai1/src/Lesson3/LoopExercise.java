@@ -4,6 +4,82 @@ import javax.swing.*;
 import java.util.Scanner;
 
 public class LoopExercise {
+    public void menu()
+    {
+        System.out.printf("\n ------------------------------");
+        System.out.printf("\n Bài 1: Liệt kê n số nguyên tố.");
+        System.out.printf("\n Bài 2: Liệt kê n số Fibonacci.");
+        System.out.printf("\n Bài 3: Tính n!");
+        System.out.printf("\n Bài 4: Kiểm tra số nguyên tố random");
+        System.out.printf("\n Bài 5: In ra màn hình index của tất cả ký tự 'o' trong chuỗi.");
+        System.out.printf("\n Bài 6: In bảng cửu chương");
+        System.out.printf("\n Bài 7: Kiểm tra các loại tam giác.");
+        System.out.printf("\n Bài 8: Đếm từ trong chuỗi");
+        System.out.printf("\n Bài 9: Chuẩn hóa xâu ký tự.");
+        System.out.printf("\n Bài 10: Tổng chữ số trong số nguyên bất kỳ.");
+        System.out.printf("\n Bài 11: Phân tích số nguyên thành các thừa số nguyên tố");
+        System.out.printf("\n Bài 12: Giải phương trình bậc nhất ax+b = 0");
+        System.out.printf("\n Bài 13: Tính tổng các số chia hết cho 3");
+        System.out.printf("\n Bài 14: Kiểm tra số nguyên âm/ nguyên dương");
+        System.out.printf("\n Bài 15: Đếm số lần ký tự '0' xuất hiện trong chuỗi");
+        System.out.printf("\n ------------------------------");
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("\n Bạn muốn xem bài nào? nhập vào đây:");
+        int number = scanner.nextInt();
+        switch (number)
+        {
+            case 1:
+                showSoNT();menu();
+                break;
+            case 2:
+                showFibonacci();menu();
+                break;
+            case 3:
+                calGiaiThua();menu();
+                break;
+            case 4:
+                randomSoNT();menu();
+                break;
+            case 5:
+                indexChuoi();menu();
+                break;
+            case 6:
+                showBangCuuChuong();menu();
+                break;
+            case 7:
+                checkTamGiac();menu();
+                break;
+            case 8:
+                demTu();menu();
+                break;
+            case 9:
+                chuanHoaChuoi();menu();
+                break;
+            case 10:
+                tongChuSo();menu();
+                break;
+            case 11:
+                tinhTSNT();menu();
+                break;
+            case 12:
+                giaiPTBac1();menu();
+                break;
+            case 13:
+                tongSoChiaHetCho3();menu();
+                break;
+            case 14:
+                checkSoNguyen();menu();
+                break;
+            case 15:
+                demKyTu();menu();
+                break;
+            default:
+                System.out.printf("Không có bài nào hợp lệ với số bạn chọn, mời chọn lại");
+                menu();
+        }
+
+
+    }
     // bài tập về nhà 3.1 Viết CT thực hiện
     // Liệt kê n số nguyên tố đầu tiên
     // Liệt kê các số nguyên tố < 100
@@ -138,7 +214,7 @@ public class LoopExercise {
         System.out.printf("\nBài 3.3: Nhập 1 số bất kỳ: ");
         int n = scanner.nextInt();
         int i = 1;
-        int giaithua = 1;
+        long giaithua = 1;
         System.out.printf("\n Cách 1 vòng for: ");
         for(i=1; i<=n;i++)
         {
@@ -325,16 +401,80 @@ public class LoopExercise {
 
     // Bài tập 11
     // Viêt CT phân tích số nguyên thành các thừa số nguyên tố, vd 28 =2*2*7
+    public void tinhTSNT()
+    {
+        System.out.printf("\nBài tập 11: Phân tích số nguyên thành tích thừa số nguyên tố");
+        System.out.printf("\nNhập số nguyên bất kỳ: ");
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        int number1 = number;
+        String thuaso ="";
+        for(int i = 1;i<=number;i++)
+        {
+            if(checksoNT(i) && number%i== 0)
+            {
+                number = number/i;
+                thuaso=thuaso+"*"+i;
+                i=1;
+            }
+        }
+        System.out.printf("\nTích thừa số nguyên tố của %s là: %s", number1,thuaso.substring(1));
+    }
 
     // Bài tập 12
     // viết CT giải pt bậc nhất ax+b = 0
-
+    public void giaiPTBac1()
+    {
+        System.out.printf("\nBài tập 12: Giải phương trình bậc nhất ax + b = 0");
+        System.out.printf("\nNhập số a: ");
+        Scanner scanner = new Scanner(System.in);
+        int a = scanner.nextInt();
+        System.out.printf("\nNhập số b: ");
+        int b = scanner.nextInt();
+        if(a == 0)
+            System.out.printf("\nPhương trình vô nghiệm.");
+        else {
+            if (b == 0)
+                System.out.printf("\nPhương trình có vô số nghiệm");
+            else {
+                double x = -b/a;
+                System.out.printf("\nPhương tình có nghiệm x = %2f", x);
+            }
+        }
+    }
     // Bài tập 13
     // viết Ct nhập số nguyên n, tính tổng các số %3 từ 0 đến n
-
+    public void tongSoChiaHetCho3()
+    {
+        System.out.printf("\nBài tập 13: Tính tổng các số chia hết cho 3 từ 0 đến n");
+        System.out.printf("\nNhập số n: ");
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int tong = 0;
+        for(int i = 0; i<=n; i++)
+        {
+            if(i%3== 0)
+            {
+                tong = tong+i;
+            }
+        }
+        System.out.printf("\nTổng các số chia hết cho 3 từ 0 đến %s là %s", n, tong);
+    }
     // Bài tập 14
     // Viết CT nhập số bất kỳ, kiểm tra nó là nguyên âm hay nguyên dương
-
+    public void checkSoNguyen()
+    {
+        System.out.printf("\nBài tập 14: Kiểm tra số nguyên âm hay dương");
+        System.out.printf("\nNhập số n: ");
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        if(n > 0)
+            System.out.printf("\nĐây là số nguyên dương");
+        else if(n<0)
+            System.out.printf("\nĐây là só nguyên âm");
+        else
+            System.out.printf("\nĐây không phải số nguyên âm, không phải số nguyên dương");
+    }
     // Bài tập 15
     // cho chuỗi "You only live once, but if you do it right, once is enough"
     //  Đếm số lần ký tự 'o' trong  xh chuỗi
