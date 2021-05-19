@@ -6,6 +6,7 @@ import java.sql.SQLOutput;
 import Lesson2.*;
 import Lesson1.*;
 import Lesson3.*;
+import Lesson5.*;
 
 public class App {
     int a = 5;
@@ -115,7 +116,14 @@ public class App {
  */
 
         LoopExercise loopExercise= new LoopExercise();
-            loopExercise.menu();
+           // loopExercise.menu();
+
+        lessonArray lessonArray = new lessonArray();
+            //lessonArray.showArray();
+            //lessonArray.inputArr();
+
+            lessonArray.menu();
+
 
 
         // Bài tập về nhà 3.1 số nguyên tố
