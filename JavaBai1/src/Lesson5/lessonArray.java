@@ -61,8 +61,18 @@ public class lessonArray {
                 indexmin = i;
             }
         }
-        System.out.printf("\n Phần tử thứ %s là lớn nhất: %s", indexmax, max);
-        System.out.printf("\n Phần tử thứ %s là bé nhất: %s", indexmin, min);
+        int max2 = intArray[0];
+        int indexmax2 = 0;
+        for (i = 0; i< intArray.length; i++)
+        {
+            if (i != indexmax && intArray[i] > max2) {
+                max2 = intArray[i];
+                indexmax2 = i;
+            }
+        }
+        System.out.printf("\n Phần tử index thứ %s là lớn nhất: %s", indexmax, max);
+        System.out.printf("\n Phần tử index thứ %s là lớn thứ hai: %s", indexmax2, max2);
+        System.out.printf("\n Phần tử index thứ %s là bé nhất: %s", indexmin, min);
     }
 
     // Tạo mảng chuỗi n phần tử từ bàn phím
