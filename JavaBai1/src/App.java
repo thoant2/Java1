@@ -7,6 +7,7 @@ import Lesson2.*;
 import Lesson1.*;
 import Lesson3.*;
 import Lesson5.*;
+import Lesson8.*;
 
 public class App {
     int a = 5;
@@ -119,12 +120,11 @@ public class App {
            // loopExercise.menu();
 
         lessonArray lessonArray = new lessonArray();
-            //lessonArray.showArray();
-            //lessonArray.inputArr();
 
-            lessonArray.menu();
+            //lessonArray.menu();
+        ArrayMutils arrayMutils = new ArrayMutils();
 
-
+            arrayMutils.menu();
 
         // Bài tập về nhà 3.1 số nguyên tố
              //loopExercise.showSoNT();

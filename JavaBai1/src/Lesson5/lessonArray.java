@@ -98,7 +98,7 @@ public class lessonArray {
         {
             System.out.printf("%s ",strArray[i]);
             strChuoi =strChuoi+strArray[i];
-            if(strArray[i].equals("Java"))
+            if(strArray[i].toLowerCase().contains("java"))
                 index++;
         }
         if(index> 0)
@@ -112,7 +112,7 @@ public class lessonArray {
         if(strChuoi.contains(str)) {
             System.out.printf("\n Chuỗi vừa nhập nằm ở vị trí trong mảng là: ");
             for (i = 0; i < strArray.length; i++) {
-                if (strArray[i].equals(str)) {
+                if (strArray[i].toLowerCase().contains(str)) {
                     System.out.printf("\t %s", i);
 
                 }
@@ -206,22 +206,33 @@ public class lessonArray {
         }*/
         int temp = 0;
         System.out.printf("\n Sắp xếp mảng giảm dần: ");
-        for(i = 0; i<intArray.length; i++)
+        i = 0;
+        while (true)
         {
-            if(i+1 < intArray.length) {
-                if (intArray[i] < intArray[i + 1] ) {
+            if (intArray[i] > intArray[i + 1] ) {
 
-                    temp = intArray[i];
-                    intArray[i] = intArray[i + 1];
-                    intArray[i + 1] = temp;
-                    i = 0;
-
-                    System.out.printf("\t %s, %s", i,intArray[i]);
-                }
-
+                temp = intArray[i+1];
+                intArray[i +1] = intArray[i];
+                intArray[i] = temp;
+                i = 0;
+            }
+            else  // phần tử cuối thì ko lặp
+            {
+                if(i>=intArray.length-2)
+                    break;
+                else
+                    i++;
             }
 
         }
+        //System.out.printf("\t %s",intArray[]);
+        for (i=0; i< intArray.length; i++)
+        {
+
+                System.out.printf("\t%s", intArray[i]);
+
+        }
+
         // Sắp xếp mảng theo thứ tự giảm dần
       /*  System.out.printf("\n Sắp xếp mảng giảm dần: ");
         temp = 0;
